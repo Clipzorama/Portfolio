@@ -4,6 +4,16 @@ import Home from "./pages/Home"
 
 function App() {
 
+  /* 
+  
+  The index attribute is a shorthand way of saying: 
+  
+  <Route path="/" element={<Home />} />
+
+  index is used for the default route
+
+  */
+
   return (
     <>
       <BrowserRouter>
