@@ -17,6 +17,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      {/* Wrapped in routes for all segues */}
         <Routes>
           <Route index element={<Home />} />
           {/* Reacts Version of a 404 Basically */}
