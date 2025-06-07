@@ -1,4 +1,5 @@
 import { ThemeToggle } from "../components/ThemeToggle";
+import { StarBackground } from "@/components/StarBackground";
 
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
             <ThemeToggle />
 
             {/* Background effects (Metior shower) */}
+            <StarBackground />
 
             {/* Navbar */}
             {/* Main Content --> Hero Section, About Section, Skills Section, Projects Section, Contact Section */}
