@@ -1,5 +1,6 @@
 import { ThemeToggle } from "../components/ThemeToggle";
 import { StarBackground } from "@/components/StarBackground";
+import { NavBar } from "@/components/NavBar";
 
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
             <StarBackground />
 
             {/* Navbar */}
+            <NavBar />
             {/* Main Content --> Hero Section, About Section, Skills Section, Projects Section, Contact Section */}
 
             {/* Simple Footer */}
