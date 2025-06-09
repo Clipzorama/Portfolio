@@ -14,6 +14,7 @@ function Home() {
 
             {/* Navbar */}
             <NavBar />
+            
             {/* Main Content --> Hero Section, About Section, Skills Section, Projects Section, Contact Section */}
 
             {/* Simple Footer */}
