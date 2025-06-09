@@ -1,3 +1,4 @@
+import { ArrowDown } from "lucide-react";
 
 
 export const HeroSection = () => {
@@ -15,7 +16,22 @@ export const HeroSection = () => {
                         <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Wynaar</span> {/* Makes it so there is a delay on each element within a sequence */}
                     </h1>
 
+                    <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4">
+                        I’m passionate about helping others bring their digital vision to life through web development, 
+                        while exploring finance and coding solutions in Python.
+                    </p>
+                    <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+                        <a href="#projects"
+                        className="cosmic-button">Check Out My Work</a>
+                    </div>
+
                 </div>
+            </div>
+
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+                <span>Scroll Down</span>
+                <ArrowDown className="h-5 w-5 text-primary" />
+
             </div>
         </section>
     );
