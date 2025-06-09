@@ -12,6 +12,7 @@ const navItems = [
 
 export const NavBar = () => {
 
+    // implementing a flag for the scroll affect on nav
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
