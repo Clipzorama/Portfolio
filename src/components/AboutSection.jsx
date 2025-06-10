@@ -1,4 +1,4 @@
-import { BriefcaseMedical, Code } from "lucide-react";
+import { Bird, BriefcaseMedical, Code } from "lucide-react";
 
 
 export const AboutSection = () => {
@@ -42,6 +42,15 @@ export const AboutSection = () => {
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <Code className="w-6 h-6 text-primary" />
                                 </div>
+                                <div className="text-left">
+                                    <h4 className="font-semibold text-lg">
+                                        Tech Stack & Tools
+                                    </h4>
+                                    <p className="text-muted-foreground text-sm">
+                                        I work primarily with Python, Java, JavaScript, HTML/CSS, and React. 
+                                        I’ve built full-stack applications and backend systems using frameworks like Spring Boot and tools like Hibernate, MySQL, and REST APIs.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className="gradient-border p-6 card-hover">
@@ -49,12 +58,30 @@ export const AboutSection = () => {
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <BriefcaseMedical className="w-6 h-6 text-primary" />
                                 </div>
+                                <div className="text-left">
+                                    <h4 className="font-semibold text-lg">
+                                        A Journey Through Tech & People
+                                    </h4>
+                                    <p className="text-muted-foreground text-sm">
+                                        With hands-on experience in both technical and customer-facing roles, 
+                                        I’ve developed the skills to solve problems, work with people, and build with purpose. Each chapter of my journey has added something valuable to how I approach development.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className="gradient-border p-6 card-hover">
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-full bg-primary/10">
-                                    <Code className="w-6 h-6 text-primary" />
+                                    <Bird className="w-6 h-6 text-primary" />
+                                </div>
+                                <div className="text-left">
+                                    <h4 className="font-semibold text-lg">
+                                        More Than a Developer
+                                    </h4>
+                                    <p className="text-muted-foreground text-sm">
+                                        From my perspective, creativity is an important side of coding. 
+                                        Fashion, music, and travel let me find ways to express myself, and those experiences help my skills as a developer.
+                                    </p>
                                 </div>
                             </div>
                         </div>
