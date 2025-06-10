@@ -18,9 +18,6 @@ export const NavBar = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
-
-
     useEffect(() => {
         const handleScroll = () => {
             // scrolling down more than 10px's sets this boolean to true 
