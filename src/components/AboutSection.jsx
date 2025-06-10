@@ -1,3 +1,4 @@
+import { BriefcaseMedical, Code } from "lucide-react";
 
 
 export const AboutSection = () => {
@@ -36,10 +37,27 @@ export const AboutSection = () => {
                     {/* Right side of the grid */}
                     <div className="grid grid-cols-1 gap-6">
                         {/* all individual cards */}
-                        <div className="gradient-border p-6 card-hover"></div>
-                        <div className="gradient-border p-6 card-hover"></div>
-                        <div className="gradient-border p-6 card-hover"></div>
-
+                        <div className="gradient-border p-6 card-hover">
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 rounded-full bg-primary/10">
+                                    <Code className="w-6 h-6 text-primary" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="gradient-border p-6 card-hover">
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 rounded-full bg-primary/10">
+                                    <BriefcaseMedical className="w-6 h-6 text-primary" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="gradient-border p-6 card-hover">
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 rounded-full bg-primary/10">
+                                    <Code className="w-6 h-6 text-primary" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
