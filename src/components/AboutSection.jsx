@@ -43,7 +43,7 @@ export const AboutSection = () => {
                                     <Code className="w-6 h-6 text-primary" />
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg">
+                                    <h4 className="font-semibold text-lg mb-2">
                                         Tech Stack & Tools
                                     </h4>
                                     <p className="text-muted-foreground text-sm">
@@ -59,7 +59,7 @@ export const AboutSection = () => {
                                     <BriefcaseMedical className="w-6 h-6 text-primary" />
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg">
+                                    <h4 className="font-semibold text-lg mb-2">
                                         A Journey Through Tech & People
                                     </h4>
                                     <p className="text-muted-foreground text-sm">
@@ -75,7 +75,7 @@ export const AboutSection = () => {
                                     <Bird className="w-6 h-6 text-primary" />
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg">
+                                    <h4 className="font-semibold text-lg mb-2">
                                         More Than a Developer
                                     </h4>
                                     <p className="text-muted-foreground text-sm">
