@@ -37,6 +37,7 @@ export const SkillSection = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {skills.map((skill, key) => (
                         <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
+                            {/* Main text */}
                             <div className="text-left mb-4 ">
                                 <h3 className="font-semibold text-lg">{skill.name}</h3>
                             </div>
@@ -45,6 +46,7 @@ export const SkillSection = () => {
                                 <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out}" 
                                 style={{width: skill.level + "%"}} />
                             </div>
+                            {/* Number and percentage that corresponds with meter as well */}
                             <div className="text-right mt-1">
                                 <span className="text-sm text-muted-foreground">{skill.level}%</span>
                             </div>
