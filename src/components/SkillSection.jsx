@@ -6,20 +6,22 @@ const skills = [
     { name: "JavaScript", level: 90, category: "frontend" },
     { name: "React", level: 90, category: "frontend" },
     { name: "TypeScript", level: 85, category: "frontend" },
-    { name: "Tailwind CSS", level: 90, category: "frontend" },
+    { name: "Tailwind CSS", level: 85, category: "frontend" },
     { name: "Next.js", level: 80, category: "frontend" },
 
     // backend skills
     { name: "Node.js", level: 80, category: "backend" },
     { name: "Express.js", level: 75, category: "backend" },
     { name: "MongoDB", level: 70, category: "backend" },
-    { name: "MySQL", level: 65, category: "backend" },
+    { name: "MySQL", level: 80, category: "backend" },
+    { name: "Python", level: 90, category: "backend/data structures" },
+
 
     // Tools
     { name: "VS Code", level: 95, category: "tools" },
     { name: "PyCharm", level: 85, category: "tools" },
     { name: "Git/GitHub", level: 90, category: "tools" },
-    { name: "Vercel", level: 80, category: "tools" },
+    { name: "Vercel", level: 85, category: "tools" },
 
 
 ]
@@ -40,10 +42,11 @@ export const SkillSection = () => {
                             </div>
                             {/* This here is gonna be for the meter in the card */}
                             <div className="w-full bg-secondary/5 h-2 rounded-full overflow-hidden">
-                                <div>
-
-                                </div>
-
+                                <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out}" 
+                                style={{width: skill.level + "%"}} />
+                            </div>
+                            <div className="text-right mt-1">
+                                <span className="text-sm text-muted-foreground">{skill.level}%</span>
                             </div>
 
                         </div>
