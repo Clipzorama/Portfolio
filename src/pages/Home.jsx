@@ -4,6 +4,7 @@ import { NavBar } from "@/components/NavBar";
 import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
 import { SkillSection } from "../components/SkillSection";
+import { ProjectSection } from "../components/ProjectSection";
 
 
 function Home() {
@@ -23,6 +24,7 @@ function Home() {
                 <HeroSection />
                 <AboutSection />
                 <SkillSection />
+                <ProjectSection />
                 
             </main>
 
