@@ -1,6 +1,17 @@
 import { ArrowDown } from "lucide-react";
 
 
+/*  
+
+Potential add ons for the website:
+
+text particles three.js effect
+
+animation under the "Check out my work" button
+
+*/
+
+
 export const HeroSection = () => {
 
     return (
