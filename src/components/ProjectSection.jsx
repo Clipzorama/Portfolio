@@ -1,6 +1,7 @@
 import Strat from '@/assets/strat.png'
 import Tello from '@/assets/tello.jpg'
 import Server from '@/assets/social-media-server.png'
+import { Github } from 'lucide-react'
 
 
 
@@ -11,13 +12,13 @@ const projects = [
         description: "A Python tool for backtesting trading strategies with a Tkinter UI, visualizing price data, and using technical indicators for market insights.",
         image: Strat,
         tags: ["Python", "Tkinter", "Trading Strategies", "Backtesting", "Financial Indicators"],
-        githubUrl: "",
+        githubUrl: "https://github.com/Clipzorama/StratAnalyzer",
     },
 
     {
         "id": 2,
         title: "Tello FaceTracker & Speech Control",
-        description: "A versatile Tello drone project featuring face tracking, object detection, and voice-command control. Implemented using Vosk, OpenCV, Pygame, and Djitellopy.",
+        description: "A versatile Tello drone project featuring face tracking, object detection, and voice-command control.",
         image: Tello,
         tags: ["Python", "Vosk", "OpenCV", "Pygame", "Djitellopy"],
         githubUrl: "https://github.com/Clipzorama/TelloDrone-FaceTrack-SpeechControl",
@@ -26,7 +27,7 @@ const projects = [
     {
         "id": 3,
         title: "Social Media Backend System",
-        description: "A comprehensive backend system for a social media platform built with Spring Boot, Hibernate, and MySQL. It manages user accounts, profiles, posts, comments, likes, and follower relationships, offering a robust set of RESTful APIs for interaction.",
+        description: "A comprehensive backend system for a social media platform built with Spring Boot, Hibernate, and MySQL.",
         image: Server,
         tags: ["Java", "Spring Boot", "Hibernate", "MySQL", "RESTful APIs"],
         githubUrl: "https://github.com/Clipzorama/Social-Media-Backend-System",
@@ -58,12 +59,21 @@ export const ProjectSection = () => {
                                         <span className="px-2 py-1 text-xs font-medium rounded-full bg-primary/10 border text-secondary-foreground">{tag}</span>
                                     ))}
                                 </div>
-                            </div>
                             
-                            {/*  */}
-                            <h3 className="text-xl font-semibold mb-1 px-4">{project.title}</h3>
-                            <p className="text-muted-foreground text-sm mb-4 px-4">{project.description}</p>
-
+                            
+                                {/* Title and Description of the website */}
+                                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+                                
+                                {/* This will be for the link to the repository */}
+                                <div className="flex justify-between items-center">
+                                    <div className="flex space-x-3">
+                                        <a className="text-foreground/80 hover:text-primary transition-colors duration-300" target='_blank' href={project.githubUrl}>
+                                            <Github size={24} />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
