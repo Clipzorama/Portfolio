@@ -12,11 +12,8 @@ function Home() {
         <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
             {/* First we will add theme toggle */}
             <ThemeToggle />
-
             {/* Background effects (Metior shower) */}
             <StarBackground />
-            
-
             {/* Navbar */}
             <NavBar />
 
