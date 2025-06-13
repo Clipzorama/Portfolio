@@ -166,8 +166,8 @@
 }
 
 @utility meteor {
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  @apply absolute bg-linear-to-r from-red-900 via-red-950 to-transparent rounded-full;
+  box-shadow: 0 0 10px 5px rgba(120, 0, 0, 0.3);
 }
 
 #root {
