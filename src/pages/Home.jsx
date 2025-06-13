@@ -15,6 +15,7 @@ function Home() {
 
             {/* Background effects (Metior shower) */}
             <StarBackground />
+            
 
             {/* Navbar */}
             <NavBar />

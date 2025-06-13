@@ -1,4 +1,7 @@
 import { Bird, BriefcaseMedical, Code } from "lucide-react";
+import SpotlightCard from '@/Effects/SpotlightCard';
+  
+
 
 
 export const AboutSection = () => {
@@ -37,7 +40,7 @@ export const AboutSection = () => {
                     {/* Right side of the grid */}
                     <div className="grid grid-cols-1 gap-6">
                         {/* all individual cards */}
-                        <div className="gradient-border p-6 card-hover border border-primary/40">
+                        <SpotlightCard spotlightColor="rgba(140, 0, 0, 0.3)" className="gradient-border p-6 card-hover border border-primary/40">
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <Code className="w-6 h-6 text-primary" />
@@ -52,8 +55,8 @@ export const AboutSection = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="gradient-border p-6 card-hover border border-primary/40">
+                        </SpotlightCard>
+                        <SpotlightCard spotlightColor="rgba(140, 0, 0, 0.3)" className="gradient-border p-6 card-hover border border-primary/40">
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <BriefcaseMedical className="w-6 h-6 text-primary" />
@@ -68,8 +71,8 @@ export const AboutSection = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="gradient-border p-6 card-hover border border-primary/40">
+                        </SpotlightCard>
+                        <SpotlightCard spotlightColor="rgba(140, 0, 0, 0.3)" className="gradient-border p-6 card-hover border border-primary/40">
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <Bird className="w-6 h-6 text-primary" />
@@ -84,7 +87,7 @@ export const AboutSection = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </SpotlightCard>
                     </div>
 
 
