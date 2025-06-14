@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 
+
+// handles the hover spotlight effect
 const SpotlightCard = ({ children, className = "", spotlightColor = "rgba(255, 255, 255, 0.25)" }) => {
   const divRef = useRef(null);
   const [isFocused, setIsFocused] = useState(false);
