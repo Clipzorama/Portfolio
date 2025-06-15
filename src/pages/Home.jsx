@@ -9,20 +9,25 @@ import { useState, useEffect } from "react";
 
 
 function Home() {
+    // isDarkMod --> value is whats in local storage --> boolean
   const [isDarkMod, setIsDarkMod] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
 
   useEffect(() => {
+
     const updateTheme = () => {
       const storedTheme = localStorage.getItem("theme");
       setIsDarkMod(storedTheme === "dark");
     };
 
+    // storage event only fires when localStorage changes in another browser tab or window.
     window.addEventListener("storage", updateTheme);
+
     // fallback for same-tab updates
     const interval = setInterval(updateTheme, 300);
 
+    
     return () => {
       window.removeEventListener("storage", updateTheme);
       clearInterval(interval);
