@@ -5,15 +5,38 @@ import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
 import { SkillSection } from "../components/SkillSection";
 import { ProjectSection } from "../components/ProjectSection";
+import { useState, useEffect } from "react";
 
 
 function Home() {
+  const [isDarkMod, setIsDarkMod] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+
+  useEffect(() => {
+    const updateTheme = () => {
+      const storedTheme = localStorage.getItem("theme");
+      setIsDarkMod(storedTheme === "dark");
+    };
+
+    window.addEventListener("storage", updateTheme);
+    // fallback for same-tab updates
+    const interval = setInterval(updateTheme, 300);
+
+    return () => {
+      window.removeEventListener("storage", updateTheme);
+      clearInterval(interval);
+    };
+  }, []);
+
     return (
         <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
             {/* First we will add theme toggle */}
             <ThemeToggle />
+
             {/* Background effects (Metior shower) */}
-            <StarBackground />
+            {isDarkMod && <StarBackground />}
+            
             {/* Navbar */}
             <NavBar />
 
