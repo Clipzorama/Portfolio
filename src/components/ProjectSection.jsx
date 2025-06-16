@@ -1,7 +1,7 @@
 import Strat from '@/assets/strat.png'
 import Tello from '@/assets/tello.jpg'
 import Server from '@/assets/social-media-server.png'
-import { Github } from 'lucide-react'
+import { ArrowRight, Github } from 'lucide-react'
 
 
 
@@ -76,6 +76,13 @@ export const ProjectSection = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                <div className="flex mt-12">
+                    <div className="cosmic-button cursor-pointer mx-auto">
+                        <a className="flex" href="https://github.com/Clipzorama" target="_blank">Check out my GitHub <ArrowRight size={16} /></a>
+
+                    </div>
                 </div>
 
             </div>
