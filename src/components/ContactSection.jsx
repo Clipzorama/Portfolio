@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 
 export const ContactSection = () => {
@@ -22,11 +22,11 @@ export const ContactSection = () => {
 
                         {/* First Section */}
                         <div className="space-y-6 justify-center">
-                            <div className="flex items-start space-x-4">
+                            <div className="flex items-start">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <Mail className="h-6 w-6 text-primary" />
                                 </div>
-                                <div>
+                                <div className="w-1/2">
                                     <h4 className="font-medium">Email</h4>
                                     <a href="mailto:wchrision@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">wchrision@gmail.com</a>
                                 </div>
@@ -35,13 +35,26 @@ export const ContactSection = () => {
 
                         {/* Second Section */}
                         <div className="space-y-6 justify-center">
-                            <div className="flex items-start space-x-4">
+                            <div className="flex items-center justify-start">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <Phone className="h-6 w-6 text-primary" />
                                 </div>
-                                <div>
+                                <div className="w-1/2">
                                     <h4 className="font-medium">Phone</h4>
                                     <a href="tel:+19293746392" className="text-muted-foreground hover:text-primary transition-colors">+1 (929) 374-6392</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Third Section */}
+                        <div className="space-y-6 justify-center">
+                            <div className="flex items-start">
+                                <div className="p-3 rounded-full bg-primary/10">
+                                    <MapPin className="h-6 w-6 text-primary" />
+                                </div>
+                                <div className="w-1/2">
+                                    <h4 className="font-medium">Location</h4>
+                                    <a className="text-muted-foreground hover:text-primary transition-colors">Derby, CT, United States</a>
                                 </div>
                             </div>
                         </div>
