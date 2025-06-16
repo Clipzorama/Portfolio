@@ -6,6 +6,7 @@ import { AboutSection } from "../components/AboutSection";
 import { SkillSection } from "../components/SkillSection";
 import { ProjectSection } from "../components/ProjectSection";
 import { useState, useEffect } from "react";
+import { ContactSection } from "../components/ContactSection";
 
 
 function Home() {
@@ -51,6 +52,7 @@ function Home() {
                 <AboutSection />
                 <SkillSection />
                 <ProjectSection />
+                <ContactSection />
                 
             </main>
 

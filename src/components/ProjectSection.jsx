@@ -80,7 +80,7 @@ export const ProjectSection = () => {
                 
                 {/* For the link to myt github account */}
                 <div className="text-center mt-12">
-                        <a className="cosmic-button w-fit flex items-center mx-auto gap-2" href="https://github.com/Clipzorama" target="_blank">Check out my GitHub <ExternalLink size={16} /></a>
+                        <a className="cosmic-button w-fit flex items-center mx-auto gap-2" href="https://github.com/Clipzorama" target="_blank">GitHub Portfolio<ExternalLink size={16} /></a>
                 </div>
 
             </div>
