@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 // id, size, x, y, opacity, animationDuration --> For the stars
-
 export const StarBackground = () => {
 
     const [stars, setStars] = useState([]);
@@ -60,7 +59,6 @@ export const StarBackground = () => {
         setMeteors(newMeteros);
     };
 
-
     return (
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0"> 
             {stars.map((star) => (
@@ -88,5 +86,4 @@ export const StarBackground = () => {
         </div>
 
     );
-
 }
