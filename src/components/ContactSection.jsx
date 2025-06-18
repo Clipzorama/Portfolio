@@ -1,5 +1,5 @@
-import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
-
+import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import {cn} from '@/lib/utils';
 
 export const ContactSection = () => {
     return (
@@ -59,7 +59,7 @@ export const ContactSection = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-start pt-8">
+                        <div className="pt-8">
                             <h4 className="font-medium mb-4">Connect With Me</h4>
                             {/* All Link Icons will go here */}
                                 <div className="flex space-x-4 justify-center">
@@ -82,7 +82,7 @@ export const ContactSection = () => {
                         <form className="space-y-6">
                             {/* individual forms here */}
                             <div>
-                                <label className="block text-sm font-medium mb-2 opacity-80" htmlFor="name"> Your Name</label>
+                                <label className="block text-sm font-medium mb-2 opacity-80" htmlFor="name">Your Name</label>
                                 <input 
                                 type="text" 
                                 id="name" 
@@ -91,16 +91,35 @@ export const ContactSection = () => {
                                 className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus-ring-2 focus-ring-primary placeholder:text-primary"
                                 placeholder="Chrision Wynaar..." />
                             </div>
+                            
                             <div>
-                                <label className="block text-sm font-medium mb-2 opacity-80" htmlFor="name"> Your Name</label>
+                                <label className="block text-sm font-medium mb-2 opacity-80" htmlFor="name">Your Email</label>
                                 <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
+                                type="email" 
+                                id="email" 
+                                name="email" 
                                 required
                                 className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus-ring-2 focus-ring-primary placeholder:text-primary"
-                                placeholder="Chrision Wynaar..." />
+                                placeholder="chrision@gmail.com" />
                             </div>
+
+                            <div>
+                                <label className="block text-sm font-medium mb-2 opacity-80" htmlFor="name">Your Message</label>
+                                <textarea 
+                                id="message" 
+                                name="message" 
+                                required
+                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus-ring-2 focus-ring-primary placeholder:text-primary resize-none"
+                                placeholder="Hi, I’d like to delve into..." />
+                            </div>
+
+                            <button type="submit" className={cn("cosmic-button w-full flex items-center justify-center gap-2",
+
+
+                            )}>
+                                
+                                <Send size={16} />
+                            </button>
                         </form> 
                     </div>
 
