@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import NotFound from "./pages/NotFound"
 import Home from "./pages/Home"
+import { Toaster } from "@/components/ui/toaster"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Toaster />
       <BrowserRouter>
       {/* Wrapped in routes for all segues */}
         <Routes>
