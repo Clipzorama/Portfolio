@@ -76,8 +76,32 @@ export const ContactSection = () => {
 
                     {/* Right side and form part of the contact section */}
 
-                    <div className="bg-card p-8 rounded-lg shadow-xs">
+                    <div className="bg-card/60 p-8 rounded-lg shadow-xs border border-primary">
                         <h3 className="text-2xl font-semibold mb-6">Send A Message</h3>
+
+                        <form className="space-y-6">
+                            {/* individual forms here */}
+                            <div>
+                                <label className="block text-sm font-medium mb-2 opacity-80" htmlFor="name"> Your Name</label>
+                                <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus-ring-2 focus-ring-primary placeholder:text-primary"
+                                placeholder="Chrision Wynaar..." />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2 opacity-80" htmlFor="name"> Your Name</label>
+                                <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus-ring-2 focus-ring-primary placeholder:text-primary"
+                                placeholder="Chrision Wynaar..." />
+                            </div>
+                        </form> 
                     </div>
 
                 </div>
