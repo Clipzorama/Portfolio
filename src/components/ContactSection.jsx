@@ -1,7 +1,31 @@
 import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import {cn} from '@/lib/utils';
+import { useToast } from '@/hooks/use-toast'
+import { useState } from "react";
 
 export const ContactSection = () => {
+
+    const {toast} = useToast();
+    const [inSubmission, setSubmission] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        setSubmission(true)
+
+        setTimeout(() => {
+            toast({
+                title: 'Message sent successfully',
+                description: ' We will get back to you soon.',
+            });
+
+            e.target.reset();
+            setSubmission(false)
+
+        }, 1500);
+
+    }
+
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
 
@@ -79,7 +103,7 @@ export const ContactSection = () => {
                     <div className="bg-card/60 p-8 rounded-lg shadow-xs border border-primary">
                         <h3 className="text-2xl font-semibold mb-6">Send A Message</h3>
 
-                        <form className="space-y-6">
+                        <form className="space-y-6" onSubmit={handleSubmit}>
                             {/* individual forms here */}
                             <div>
                                 <label className="block text-sm font-medium mb-2 opacity-80" htmlFor="name">Your Name</label>
@@ -113,11 +137,12 @@ export const ContactSection = () => {
                                 placeholder="Hi, I’d like to delve into..." />
                             </div>
 
-                            <button type="submit" className={cn("cosmic-button w-full flex items-center justify-center gap-2",
-
-
-                            )}>
-                                
+                            <button 
+                            type="submit" 
+                            disabled={inSubmission}
+                            className={cn("cosmic-button w-full flex items-center justify-center gap-2 cursor-pointer")}
+                            >
+                                {inSubmission ? "Sending..." : "Send Message"}
                                 <Send size={16} />
                             </button>
                         </form> 
