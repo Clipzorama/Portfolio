@@ -2,6 +2,7 @@ import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import {cn} from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast'
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export const ContactSection = () => {
 
@@ -9,22 +10,34 @@ export const ContactSection = () => {
     const [inSubmission, setSubmission] = useState(false);
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+    e.preventDefault();
 
-        setSubmission(true)
+    setSubmission(true);
 
-        setTimeout(() => {
-            toast({
-                title: 'Message sent successfully',
-                description: ' We will get back to you soon.',
-            });
+    const form = e.target;
 
-            e.target.reset();
-            setSubmission(false)
-
-        }, 1500);
-
-    }
+    emailjs.sendForm(
+        'service_pkydx5m',
+        'template_guhfqpc',
+        form,
+        'cUOI3JuKmxe5PWMEV'
+    ).then(() => {
+        toast({
+            title: 'Message sent successfully',
+            description: 'We will get back to you soon.',
+        });
+        form.reset();
+        setSubmission(false);
+    }).catch((error) => {
+        toast({
+            title: 'Error sending message',
+            description: 'Please try again later.',
+            variant: 'destructive'
+        });
+        setSubmission(false);
+        console.error(error);
+    });
+}
 
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
