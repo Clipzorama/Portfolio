@@ -101,7 +101,7 @@ export const ContactSection = () => {
                     {/* Right side and form part of the contact section */}
 
                     <div className="bg-card/60 p-8 rounded-lg shadow-xs border border-primary">
-                        <h3 className="text-2xl font-semibold mb-6">Send A Message</h3>
+                        <h3 className="text-2xl self-center font-semibold mb-6">Send A Message</h3>
 
                         <form className="space-y-6" onSubmit={handleSubmit}>
                             {/* individual forms here */}
