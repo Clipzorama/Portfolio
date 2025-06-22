@@ -1,4 +1,7 @@
 import { ArrowDown } from "lucide-react";
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Environment } from '@react-three/drei';
+import { Robot } from '@/Effects/Robot'; // adjust the path if needed
 
 
 /*  
@@ -18,6 +21,17 @@ export const HeroSection = () => {
         <section id="hero" className="position-relative min-h-screen flex flex-col items-center justify-center px-4">
 
             <div className="container max-w-4xl mx-auto text-center z-10" >
+
+                <div className="absolute inset-0 z-0">
+                    <Canvas camera={{ position: [0, 1.5, 3] }}>
+                        <ambientLight intensity={0.5} />
+                        <directionalLight position={[2, 2, 2]} />
+                        <Environment preset="sunset" />
+                        <OrbitControls enableZoom={false} />
+                        <Robot scale={1.5} position={[0, -1.5, 0]} />
+                    </Canvas>
+                </div>
+
 
                 <div className="space-y-6 ">
 

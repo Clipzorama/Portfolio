@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react';
 
 export function Robot(props) {
   const group = useRef();
-  const { scene, animations } = useGLTF('@/models/RobotExpressive.glb');
+  const { scene, animations } = useGLTF('/models/RobotExpressive.glb');
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
