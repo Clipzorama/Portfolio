@@ -22,13 +22,15 @@ export const HeroSection = () => {
 
             <div className="container max-w-4xl mx-auto text-center z-10" >
 
-                <div className="absolute inset-0 z-0">
+                {/* Making multiple robots within the page.*/}
+
+                <div className="absolute inset-0 z-0 animate-fade-in-delay-5">
                     <Canvas camera={{ position: [0, 1.5, 3] }}>
                         <ambientLight intensity={0.5} />
                         <directionalLight position={[2, 2, 2]} />
                         <Environment preset="sunset" />
                         <OrbitControls enableZoom={false} />
-                        <Robot scale={1.5} position={[0, -1.5, 0]} />
+                        <Robot scale={.2} position={[0, -1.5, 0]} />
                     </Canvas>
                 </div>
 
