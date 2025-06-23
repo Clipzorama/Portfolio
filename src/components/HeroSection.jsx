@@ -47,7 +47,7 @@ export const HeroSection = () => {
                 <div className="relative top-10 w-60 h-45 md:w-72 md:h-56 md:top-5 lg:w-[300px] lg:h-[350px] lg:absolute lg:left-15 lg:top-160 lg:-translate-y-1/2 z-0">
                     <Canvas camera={{ position: [0, 2.5, 0] }}>
                         <ambientLight intensity={0.5} />
-                        <directionalLight position={[1, 1, 1]} />
+                        <directionalLight position={[.5, .5, .5]} />
                         <Environment preset="sunset" />
                         {/* for controlling how we turn the robot */}
                         <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
