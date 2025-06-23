@@ -22,20 +22,10 @@ export const HeroSection = () => {
 
             <div className="container max-w-4xl mx-auto text-center z-10" >
 
-                {/* Making multiple robots within the page.*/}
-
-                <div className="absolute inset-0 z-0 animate-fade-in-delay-5">
-                    <Canvas camera={{ position: [0, 1.5, 3] }}>
-                        <ambientLight intensity={0.5} />
-                        <directionalLight position={[2, 2, 2]} />
-                        <Environment preset="sunset" />
-                        <OrbitControls enableZoom={false} />
-                        <Robot scale={.2} position={[0, -1.5, 0]} />
-                    </Canvas>
-                </div>
+                
 
 
-                <div className="space-y-6 ">
+                <div className="space-y-6 flex flex-col items-center justify-center">
 
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                         <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
@@ -43,7 +33,7 @@ export const HeroSection = () => {
                         <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">Wynaar</span> {/* Makes it so there is a delay on each element within a sequence */}
                     </h1>
 
-                    <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4">
+                    <p className="text-md text-pretty md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4">
                         I’m passionate about helping others bring their digital vision to life through web development, 
                         while exploring finance and coding solutions in Python.
                     </p>
@@ -51,6 +41,20 @@ export const HeroSection = () => {
                         <a href="#projects"
                         className="cosmic-button">Check Out My Work</a>
                     </div>
+
+                    {/* Making multiple robots within the page.*/}
+
+                <div className="relative top-10 w-60 h-45 md:w-72 md:h-56 md:top-5 lg:w-[300px] lg:h-[350px] lg:absolute lg:left-15 lg:top-160 lg:-translate-y-1/2 z-0">
+                    <Canvas camera={{ position: [0, 2.5, 0] }}>
+                        <ambientLight intensity={0.5} />
+                        <directionalLight position={[1, 1, 1]} />
+                        <Environment preset="sunset" />
+                        {/* for controlling how we turn the robot */}
+                        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+                        <Robot scale={.6} position={[0, -1.4, 0]} />
+
+                    </Canvas>
+                </div>
 
                 </div>
             </div>
