@@ -6,6 +6,8 @@ export function Robot(props) {
   const { scene, animations } = useGLTF('/models/RobotExpressive.glb');
   const { actions } = useAnimations(animations, group);
 
+
+  // Here im going to add the wave animation once the component is mounted
   useEffect(() => {
     // Play idle animation
     if (actions && actions['Idle']) {
