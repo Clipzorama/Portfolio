@@ -44,9 +44,9 @@ export const HeroSection = () => {
 
                     {/* Making multiple robots within the page.*/}
 
-                <div className="relative top-10 w-60 h-45 md:w-72 md:h-56 md:top-5 lg:w-[300px] lg:h-[350px] lg:absolute lg:left-15 lg:top-160 lg:-translate-y-1/2 z-0">
-                    <Canvas camera={{ position: [0, 2.5, 0] }}>
-                        <ambientLight intensity={0.5} />
+                <div className="relative top-10 w-80 h-45 md:w-72 md:h-56 md:top-5 lg:w-[300px] lg:h-[350px] lg:absolute lg:left-15 lg:top-160 lg:-translate-y-1/2 z-0">
+                    <Canvas camera={{ position: [0, 3, 0] }}>
+                        <ambientLight intensity={0} />
                         <directionalLight position={[.5, .5, .5]} />
                         <Environment preset="sunset" />
                         {/* for controlling how we turn the robot */}
