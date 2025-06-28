@@ -23,9 +23,11 @@ export function Robot({modelPath, ...props}) {
         actions['Wave'].clampWhenFinished = true;
         actions['Wave'].setLoop(THREE.LoopOnce); // play once
       }
-    }, 10000); // every 15 seconds
+    }, 10000); // every 10 seconds
 
     return () => clearInterval(waveInterval); // cleanup on unmount
+
+
   }, [actions]);
 
 
