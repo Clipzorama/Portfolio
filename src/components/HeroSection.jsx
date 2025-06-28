@@ -2,6 +2,9 @@ import { ArrowDown } from "lucide-react";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { Robot } from '@/Effects/Robot'; // adjust the path if needed
+import { useEffect } from "react";
+import { useTheme } from "@/context/ThemeContext";
+
 
 
 /*  
@@ -16,6 +19,8 @@ animation under the "Check out my work" button
 
 
 export const HeroSection = () => {
+
+    const { theme } = useTheme();
 
     return (
         <section id="hero" className="position-relative min-h-screen flex flex-col items-center justify-center px-4">
@@ -51,7 +56,13 @@ export const HeroSection = () => {
                         <Environment preset="sunset" />
                         {/* for controlling how we turn the robot */}
                         <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
-                        <Robot scale={.6} position={[0, -1.4, 0]} />
+                        <Robot 
+                            modelPath={theme === "dark" 
+                                ? "/models/RobotExpressive.glb" 
+                                : "/models/RobotExpressive2.glb"} 
+                            scale={0.6} 
+                            position={[0, -1.4, 0]} 
+                            />
 
                     </Canvas>
                 </div>
