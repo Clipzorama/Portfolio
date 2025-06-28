@@ -4,6 +4,7 @@ import { useRef, useEffect } from 'react';
 export function Robot(props) {
   const group = useRef();
   const { scene, animations } = useGLTF('/models/RobotExpressive.glb');
+  // this is how i am accessing the animations inside of the glb file
   const { actions } = useAnimations(animations, group);
 
 
