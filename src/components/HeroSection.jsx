@@ -2,7 +2,6 @@ import { ArrowDown } from "lucide-react";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { Robot } from '@/Effects/Robot'; // adjust the path if needed
-import { useEffect } from "react";
 import { useTheme } from "@/context/ThemeContext";
 
 
@@ -26,9 +25,6 @@ export const HeroSection = () => {
         <section id="hero" className="position-relative min-h-screen flex flex-col items-center justify-center px-4">
 
             <div className="container max-w-4xl mx-auto text-center z-10" >
-
-                
-
 
                 <div className="space-y-6 flex flex-col items-center justify-center">
 

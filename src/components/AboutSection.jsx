@@ -49,7 +49,7 @@ export const AboutSection = () => {
                                     <h4 className="font-semibold text-lg mb-2">
                                         Tech Stack & Tools
                                     </h4>
-                                    <p className="text-muted-foreground text-sm">
+                                    <p className="text-muted-foreground text-sm text-pretty">
                                         I work primarily with Python, Java, JavaScript, HTML/CSS, and React. 
                                         I’ve built full-stack applications and backend systems using frameworks like Spring Boot and tools like Hibernate, MySQL, and REST APIs.
                                     </p>
@@ -65,7 +65,7 @@ export const AboutSection = () => {
                                     <h4 className="font-semibold text-lg mb-2">
                                         A Journey Through Tech & People
                                     </h4>
-                                    <p className="text-muted-foreground text-sm">
+                                    <p className="text-muted-foreground text-sm text-pretty">
                                         With hands-on experience in both technical and customer-facing roles, 
                                         I’ve developed the skills to solve problems, work with people, and build with purpose. Each chapter of my journey has added something valuable to how I approach development.
                                     </p>
@@ -81,7 +81,7 @@ export const AboutSection = () => {
                                     <h4 className="font-semibold text-lg mb-2">
                                         More Than a Developer
                                     </h4>
-                                    <p className="text-muted-foreground text-sm">
+                                    <p className="text-muted-foreground text-sm text-pretty">
                                         From my perspective, creativity is an important side of coding. 
                                         Fashion, music, and travel let me find ways to express myself, and those experiences help my skills as a developer.
                                     </p>
