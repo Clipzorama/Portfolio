@@ -1,6 +1,8 @@
 import { useState } from "react";
 import {cn} from '@/lib/utils'
 
+// ADD A COOL ANIMATION UNDER THE CARD CONTAINER THAT SHOWS MY TOP CODING LANGUAGES
+
 
 const skills = [
 
