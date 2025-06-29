@@ -2,7 +2,7 @@ import { ArrowDown } from "lucide-react";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { Robot } from '@/Effects/Robot'; // adjust the path if needed
-import { useTheme } from "@/context/ThemeContext";
+import { useTheme } from "@/context/ThemeProvider";
 
 
 
