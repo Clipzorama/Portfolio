@@ -4,8 +4,6 @@ import { OrbitControls, Environment } from '@react-three/drei';
 import { Robot } from '@/Effects/Robot'; // adjust the path if needed
 import { useTheme } from "@/context/ThemeProvider";
 
-
-
 /*  
 
 Potential add ons for the website:
@@ -15,7 +13,6 @@ text particles three.js effect
 animation under the "Check out my work" button
 
 */
-
 
 export const HeroSection = () => {
 

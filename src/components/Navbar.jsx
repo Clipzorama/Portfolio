@@ -17,7 +17,7 @@ export const NavBar = () => {
 
     return (
         <nav className={cn(
-                "fixed w-full z-40 transition-all duration-300 bg-background/80 py-7", 
+                "fixed w-full z-40 transition-all duration-300 bg-background/80 pt-7 pb-3", 
                
             )}
         >
