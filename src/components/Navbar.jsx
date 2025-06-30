@@ -1,6 +1,6 @@
 import {cn} from '@/lib/utils'
 import { Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const navItems = [
     {name: "Home", href: "#hero"},
@@ -17,7 +17,7 @@ export const NavBar = () => {
 
     return (
         <nav className={cn(
-                "fixed w-full z-40 transition-all duration-300 bg-background/80 py-5", 
+                "fixed w-full z-40 transition-all duration-300 bg-background/80 py-7", 
                
             )}
         >
