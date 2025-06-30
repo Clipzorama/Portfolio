@@ -1,12 +1,14 @@
-import { ThemeToggle } from "../components/ThemeToggle";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { StarBackground } from "@/components/StarBackground";
 import { NavBar } from "@/components/NavBar";
-import { HeroSection } from "../components/HeroSection";
-import { AboutSection } from "../components/AboutSection";
-import { SkillSection } from "../components/SkillSection";
-import { ProjectSection } from "../components/ProjectSection";
+import { HeroSection } from "@/components/HeroSection";
+import { AboutSection } from "@/components/AboutSection";
+import { SkillSection } from "@/components/SkillSection";
+import { ProjectSection } from "@/components/ProjectSection";
 import { useState, useEffect } from "react";
-import { ContactSection } from "../components/ContactSection";
+import { ContactSection } from "@/components/ContactSection";
+import Particles from "@/components/Particles";
+
 
 
 function Home() {
@@ -42,6 +44,16 @@ function Home() {
 
             {/* Background effects (Metior shower) */}
             {isDarkMod && <StarBackground />}
+            {!isDarkMod && <Particles
+              particleColors={['#000000', '#000000']}
+              particleCount={200}
+              particleSpread={10}
+              speed={0.1}
+              particleBaseSize={100}
+              moveParticlesOnHover={true}
+              alphaParticles={false}
+              disableRotation={false}
+            />}
             
             {/* Navbar */}
             <NavBar />

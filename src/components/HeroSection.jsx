@@ -26,8 +26,8 @@ export const HeroSection = () => {
 
             <div className="container max-w-4xl mx-auto text-center z-10" >
 
-                <div className="space-y-6 flex flex-col items-center justify-center">
-
+                {/* div that contains the text and the button */}
+                <div className="space-y-6 flex flex-col items-center justify-center ">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                         <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
                         <span className="text-primary opacity-0 animate-fade-in-delay-1"> Chrision</span>
@@ -45,24 +45,23 @@ export const HeroSection = () => {
 
                     {/* Making multiple robots within the page.*/}
 
-                <div className="relative top-10 w-80 h-45 md:w-72 md:h-56 md:top-5 lg:w-[300px] lg:h-[350px] lg:absolute lg:left-15 lg:top-160 lg:-translate-y-1/2 z-0">
-                    <Canvas camera={{ position: [0, 3, 0] }}>
-                        <ambientLight intensity={0} />
-                        <directionalLight position={[.5, .5, .5]} />
-                        <Environment preset="sunset" />
-                        {/* for controlling how we turn the robot */}
-                        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
-                        <Robot 
-                            modelPath={theme === "dark" 
-                                ? "/models/RobotExpressive.glb" 
-                                : "/models/RobotExpressive2.glb"} 
-                            scale={0.6} 
-                            position={[0, -1.4, 0]} 
-                            />
+                    <div className="relative top-10 w-80 h-45 md:w-72 md:h-56 md:top-10 lg:absolute lg:w-[300px] lg:h-[350px] lg:left-5 lg:top-190 lg:-translate-y-1/2 xl:top-160 xl:left-20  z-0">
+                        <Canvas camera={{ position: [0, 3, 0] }}>
+                            <ambientLight intensity={0} />
+                            <directionalLight position={[.5, .5, .5]} />
+                            <Environment preset="sunset" />
+                            {/* for controlling how we turn the robot */}
+                            <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+                            <Robot 
+                                modelPath={theme === "dark" 
+                                    ? "/models/RobotExpressive.glb" 
+                                    : "/models/RobotExpressive2.glb"} 
+                                scale={0.6} 
+                                position={[0, -1.4, 0]} 
+                                />
 
-                    </Canvas>
-                </div>
-
+                        </Canvas>
+                    </div>
                 </div>
             </div>
 
