@@ -21,7 +21,7 @@ export function Robot({modelPath, ...props}) {
       if (actions['Wave']) {
         actions['Wave'].reset().fadeIn(0.3).play();
         actions['Wave'].clampWhenFinished = true;
-        actions['Wave'].setLoop(THREE.LoopOnce); // play once
+        actions['Wave'].setLoop(THREE.LoopOnce); 
       }
     }, 10000); // every 10 seconds
 

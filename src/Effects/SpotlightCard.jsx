@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useTheme } from "@/context/ThemeProvider"; // adjust path if needed
+import { useTheme } from "@/context/ThemeProvider"; 
 
 
 
@@ -10,12 +10,12 @@ const SpotlightCard = ({ children, className = "" }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
 
-  const { theme } = useTheme(); // 👈 use the current theme
+  const { theme } = useTheme();
 
   // Set spotlight color based on theme
   const spotlightColor = theme === "dark"
-    ? "rgba(179, 0, 0, 0.3)" // a shade from your dark primary
-    : "rgba(115, 99, 190, 0.3)"; // a shade from your light primary
+    ? "rgba(179, 0, 0, 0.3)" // dark primary
+    : "rgba(115, 99, 190, 0.3)"; // light primary
 
 
   const handleMouseMove = (e) => {
