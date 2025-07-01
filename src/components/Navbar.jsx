@@ -65,9 +65,7 @@ export const NavBar = () => {
                                     {item.name}
                                 </a>
                             ))}
-                            <div className="mt-8 block h-6 w-6 relative z-1000">
-                                <ThemeToggle />
-                            </div>
+                            <ThemeToggle className="block md:hidden self-center mt-2"/>
                         </div>
                         
                     </div>

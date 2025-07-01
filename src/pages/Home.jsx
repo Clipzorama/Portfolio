@@ -39,7 +39,7 @@ function Home() {
 
     return (
         <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-            <ThemeToggle />
+            <ThemeToggle className='fixed hidden md:block top-20 right-6 z-50 p-2' />
             {isDarkMod && <StarBackground />}
             {!isDarkMod && <Particles
               particleColors={['#000000', '#000000']}

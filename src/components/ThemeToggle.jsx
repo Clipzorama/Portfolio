@@ -4,14 +4,14 @@ import { useTheme } from '@/context/ThemeProvider';
 
 
 
-export const ThemeToggle = () => {
+export const ThemeToggle = ({ className = "" }) => {
 
     const { theme, toggleTheme } = useTheme();
     return ( 
         <button 
             onClick={toggleTheme} 
-            className={cn("fixed max-sm:hidden sm:hidden md:block top-20 right-6 z-50 p-2 transition-colors duration-300",
-                          "focus:outline-hidden"
+            className={cn("transition-colors duration-300 focus:outline-hidden",
+                className
             )}
         > 
             {theme === "dark" ? (

@@ -27,7 +27,7 @@ export const AboutSection = () => {
                            My goal is to keep learning, collaborate with like-minded creators, and make a positive difference through tech and finance.</p>
                         
                         <div className="flex sm-flex-row gap-4 pt-4 justify-center">
-                            <a href="#contact" className="cosmic-button">
+                            <a href="#contact" className="cosmic-button px-4">
                                 Let's Connect
                             </a>
 
