@@ -75,7 +75,7 @@ const fragment = /* glsl */ `
 `;
 
 const Particles = ({
-  particleCount = 200,
+  particleCount = 90,
   particleSpread = 10,
   speed = 0.1,
   particleColors,
@@ -203,6 +203,12 @@ const Particles = ({
         container.removeEventListener("mousemove", handleMouseMove);
       }
       cancelAnimationFrame(animationFrameId);
+
+      // Dispose of WebGL context and canvas
+      if (gl.getExtension('WEBGL_lose_context')) {
+        gl.getExtension('WEBGL_lose_context').loseContext();
+      }
+
       if (container.contains(gl.canvas)) {
         container.removeChild(gl.canvas);
       }
