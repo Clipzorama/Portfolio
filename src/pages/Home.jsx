@@ -46,7 +46,7 @@ function Home() {
             {isDarkMod && <StarBackground />}
             {!isDarkMod && <Particles
               particleColors={['#000000', '#000000']}
-              particleCount={200}
+              particleCount={90}
               particleSpread={10}
               speed={0.1}
               particleBaseSize={100}
