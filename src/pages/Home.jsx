@@ -39,10 +39,7 @@ function Home() {
 
     return (
         <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-            {/* First we will add theme toggle */}
             <ThemeToggle />
-
-            {/* Background effects (Metior shower) */}
             {isDarkMod && <StarBackground />}
             {!isDarkMod && <Particles
               particleColors={['#000000', '#000000']}

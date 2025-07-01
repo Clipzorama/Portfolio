@@ -7,12 +7,17 @@ import { Robot2 } from '@/Effects/Robot2'; // adjust the path if needed
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { useTheme } from "@/context/ThemeProvider";
-
+import { useInView } from 'react-intersection-observer';
 
 
 export const ContactSection = () => {
 
     const { theme } = useTheme();
+
+    const { ref, inView } = useInView({
+        triggerOnce: false,
+        threshold: 0.1, // renders when 10% visible
+    });
 
     const {toast} = useToast();
     const [inSubmission, setSubmission] = useState(false);
@@ -171,22 +176,25 @@ export const ContactSection = () => {
 
                 </div>
 
-                <div className="relative mx-auto top-10 w-80 h-45 md:w-72 md:h-56 md:top-10 lg:w-[300px] lg:h-[350px] lg:top-50 lg:-translate-y-1/2 xl:top-50  z-1000">
-                    <Canvas camera={{ position: [0, 3, 0] }}>
-                        <ambientLight intensity={0} />
-                        <directionalLight position={[.5, .5, .5]} />
-                        <Environment preset="sunset" />
-                        {/* for controlling how we turn the robot */}
-                        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
-                        <Robot2 
-                            modelPath={theme === "dark" 
-                                ? "/models/RobotExpressive3.glb" 
-                                : "/models/RobotExpressive4.glb"} 
-                            scale={0.6} 
-                            position={[0, -1.4, 0]} 
-                            />
+                <div ref={ref} className="relative mx-auto top-10 w-80 h-45 md:w-72 md:h-56 md:top-10 lg:w-[300px] lg:h-[350px] lg:top-50 lg:-translate-y-1/2 xl:top-50  z-1000">
+                    {inView && (
+                        <Canvas camera={{ position: [0, 3, 0] }}>
+                            <ambientLight intensity={0} />
+                            <directionalLight position={[.5, .5, .5]} />
+                            <Environment preset="sunset" />
+                            {/* for controlling how we turn the robot */}
+                            <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+                            <Robot2 
+                                modelPath={theme === "dark" 
+                                    ? "/models/RobotExpressive3.glb" 
+                                    : "/models/RobotExpressive4.glb"} 
+                                scale={0.6} 
+                                position={[0, -1.4, 0]} 
+                                />
 
-                    </Canvas>
+                        </Canvas>
+                    )}
+                        
                 </div>
             </div>
         </section>

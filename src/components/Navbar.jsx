@@ -1,6 +1,7 @@
 import {cn} from '@/lib/utils'
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navItems = [
     {name: "Home", href: "#hero"},
@@ -64,7 +65,11 @@ export const NavBar = () => {
                                     {item.name}
                                 </a>
                             ))}
+                            <div className="mt-8 block h-6 w-6 relative z-1000">
+                                <ThemeToggle />
+                            </div>
                         </div>
+                        
                     </div>
 
                 </div> 

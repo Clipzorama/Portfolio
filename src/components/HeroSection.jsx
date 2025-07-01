@@ -3,20 +3,18 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { Robot } from '@/Effects/Robot'; // adjust the path if needed
 import { useTheme } from "@/context/ThemeProvider";
+import { useInView } from 'react-intersection-observer';
 
-/*  
 
-Potential add ons for the website:
-
-text particles three.js effect
-
-animation under the "Check out my work" button
-
-*/
 
 export const HeroSection = () => {
 
     const { theme } = useTheme();
+
+    const { ref, inView } = useInView({
+        triggerOnce: false,
+        threshold: 0.1, 
+    });
 
     return (
         <section id="hero" className="position-relative min-h-screen flex flex-col items-center justify-center px-4">
@@ -42,22 +40,22 @@ export const HeroSection = () => {
 
                     {/* Making multiple robots within the page.*/}
 
-                    <div className="relative top-10 w-80 h-45 md:w-72 md:h-56 md:top-10 lg:absolute lg:w-[300px] lg:h-[350px] lg:left-5 lg:top-190 lg:-translate-y-1/2 xl:top-140 xl:left-20  z-0">
-                        <Canvas camera={{ position: [0, 3, 0] }}>
+                    <div ref={ref} className="relative top-10 w-80 h-45 md:w-72 md:h-56 md:top-10 lg:absolute lg:w-[300px] lg:h-[350px] lg:left-5 lg:top-160 lg:-translate-y-1/2 xl:top-150 xl:left-20  z-0">
+                        {inView && (
+                            <Canvas camera={{ position: [0, 3, 0] }}>
                             <ambientLight intensity={0} />
                             <directionalLight position={[.5, .5, .5]} />
                             <Environment preset="sunset" />
-                            {/* for controlling how we turn the robot */}
                             <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
                             <Robot 
                                 modelPath={theme === "dark" 
-                                    ? "/models/RobotExpressive.glb" 
-                                    : "/models/RobotExpressive2.glb"} 
+                                ? "/models/RobotExpressive.glb" 
+                                : "/models/RobotExpressive2.glb"} 
                                 scale={0.6} 
                                 position={[0, -1.4, 0]} 
-                                />
-
-                        </Canvas>
+                            />
+                            </Canvas>
+                        )}
                     </div>
                 </div>
             </div>
