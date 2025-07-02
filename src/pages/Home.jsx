@@ -8,6 +8,8 @@ import { ProjectSection } from "@/components/ProjectSection";
 import { useState, useEffect } from "react";
 import { ContactSection } from "@/components/ContactSection";
 import Particles from "@/components/Particles";
+import { Footer } from "@/components/Footer";
+
 
 
 
@@ -66,6 +68,7 @@ function Home() {
             </main>
 
             {/* Simple Footer */}
+            <Footer />
         </div>
     );
 }
