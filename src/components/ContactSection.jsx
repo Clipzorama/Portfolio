@@ -16,7 +16,7 @@ export const ContactSection = () => {
 
     const { ref, inView } = useInView({
         triggerOnce: false,
-        threshold: 0.1, // renders when 10% visible
+        threshold: 0.1, // renders 10% visible
     });
 
     const {toast} = useToast();
