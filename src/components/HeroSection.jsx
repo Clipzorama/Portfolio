@@ -40,7 +40,7 @@ export const HeroSection = () => {
 
                     {/* Making multiple robots within the page.*/}
 
-                    <div ref={ref} className="relative top-10 w-80 h-45 md:w-72 md:h-56 md:top-10 lg:absolute lg:w-[300px] lg:h-[350px] lg:left-5 lg:top-180 lg:-translate-y-1/2 xl:top-150 xl:left-15  z-0">
+                    <div ref={ref} className="relative top-3 w-80 h-45 md:w-72 md:h-56 md:top-10 lg:absolute lg:w-[300px] lg:h-[350px] lg:left-5 lg:top-180 lg:-translate-y-1/2 xl:top-150 xl:left-15  z-0">
                         {inView && (
                             <Canvas camera={{ position: [0, 3, 0] }}>
                             <ambientLight intensity={0} />
