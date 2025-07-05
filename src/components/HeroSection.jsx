@@ -53,6 +53,7 @@ export const HeroSection = () => {
                                 : "/models/RobotExpressive2.glb"} 
                                 scale={0.6} 
                                 position={[0, -1.4, 0]} 
+                                
                             />
                             </Canvas>
                         )}
