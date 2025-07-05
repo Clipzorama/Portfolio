@@ -176,7 +176,7 @@ export const ContactSection = () => {
 
                 </div>
 
-                <div ref={ref} className="relative mx-auto top-10 w-80 h-45 md:w-72 md:h-56 md:top-10 lg:w-[300px] lg:h-[350px] lg:top-50 lg:-translate-y-1/2 xl:top-50  z-0">
+                <div ref={ref} className="relative w-40 h-40 mx-auto top-10 md:w-72 md:h-56 md:top-10 lg:w-[300px] lg:h-[350px] lg:top-50 lg:-translate-y-1/2 xl:top-50  z-0">
                     {inView && (
                         <Canvas camera={{ position: [0, 3, 0] }}>
                             <ambientLight intensity={0} />
